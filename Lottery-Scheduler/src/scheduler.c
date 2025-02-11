@@ -1,14 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include <string.h>
-#define MAX_STRING_LEN 256 
-
-struct Task{
-    char task_name[MAX_STRING_LEN];
-    int ticket;
-    struct Task *next;
-};
+#include "scheduler.h"
 
 struct Task *head = NULL; 
 
