@@ -2,6 +2,15 @@
 
 struct Task *head = NULL; 
 
+uint32_t generate_pid(){
+
+    const uint32_t min = 1;
+    const uint32_t max = UINT32_MAX;
+    
+    srand(time(NULL));
+    return min + random() % (max-min+1);
+    
+}
 struct Task* createTask(const char *task_name, const int tickets){
 
     if(!task_name){

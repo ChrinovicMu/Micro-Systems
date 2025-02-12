@@ -5,12 +5,14 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
+#include <stdint.h>
 
 #define MAX_STRING_LEN 256
 
 struct Task {
+    uint32_t pid;
     char task_name[MAX_STRING_LEN];
-    int ticket;
+    uint32_t ticket;
     struct Task *next;
 };
 
