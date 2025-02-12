@@ -23,6 +23,7 @@ struct Task* createTask(const char *task_name, const int tickets){
         fprintf(stderr, "allocation failed\n");
         exit(1);
     }
+    new_task->pid = generate_pid();
     strncpy(new_task->task_name, task_name, MAX_STRING_LEN);
     new_task->ticket = tickets;
     new_task->next = NULL;
@@ -73,7 +74,7 @@ int main(int argc, char *argv[])
 
     struct Task *winner_task = schedule(); 
 
-    printf("winner task = %s\n", winner_task->task_name);
+    printf("winner task = %s, pid : %d\n", winner_task->task_name, winner_task->pid);
     
     
 }
