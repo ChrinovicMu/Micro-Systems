@@ -71,10 +71,14 @@ int main(int argc, char *argv[])
     insert_task("google", 10);
     insert_task("grep", 20);
     insert_task("nvim", 30);
+    
+    int x = 0;
+    while(x <= 10){
 
-    struct Task *winner_task = schedule(); 
+        struct Task *winner_task = schedule(); 
 
-    printf("winner task = %s, pid : %d\n", winner_task->task_name, winner_task->pid);
+        printf("winner task = %s, pid : %d\n", winner_task->task_name, winner_task->pid);
+    }
     
     
 }

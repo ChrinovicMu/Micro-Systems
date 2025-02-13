@@ -13,6 +13,7 @@ struct Task {
     uint32_t pid;
     char task_name[MAX_STRING_LEN];
     uint32_t ticket;
+    uint32_t quantum_time; 
     struct Task *next;
 };
 
